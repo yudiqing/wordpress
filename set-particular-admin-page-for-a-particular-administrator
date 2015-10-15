@@ -1,0 +1,21 @@
+//if you want to set up a admin page for a particular administrator, use this snippets below. 
+
+add_action('admin_menu', 'remove_admin_menu_links');
+function remove_admin_menu_links(){
+    $user = wp_get_current_user();
+    if( $user && isset($user->user_email) && $user->user_email === 'user@email.com'  ) { 
+    //replace user@email.com with the email address for whom you want to retain the pages. 
+        remove_menu_page('tools.php');
+        remove_menu_page('themes.php');
+        remove_menu_page('options-general.php');
+        remove_menu_page('plugins.php');
+      	remove_menu_page('users.php');
+      	remove_menu_page('edit-comments.php');
+      	remove_menu_page('page.php');
+      	remove_menu_page('upload.php');
+      	remove_menu_page( 'edit.php?post_type=page' ); 
+      	remove_menu_page( 'edit.php?post_type=videos' );
+      	remove_menu_page( 'edit.php' );
+		//adjust the list of remove_menu_page as necessary. 
+    }
+}
