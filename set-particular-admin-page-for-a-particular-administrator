@@ -1,4 +1,4 @@
-//if you want to set up a admin page for a particular administrator, use this snippets below. 
+//if you want to set up a admin page for a particular administrator or user, use this snippets below. 
 
 add_action('admin_menu', 'remove_admin_menu_links');
 function remove_admin_menu_links(){
