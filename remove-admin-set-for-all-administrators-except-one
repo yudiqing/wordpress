@@ -14,6 +14,6 @@ function remove_admin_menu_links(){
       	remove_menu_page( 'edit.php?post_type=page' ); 
       	remove_menu_page( 'edit.php?post_type=videos' );
       	remove_menu_page( 'edit.php' );
-		//adjust the list of remove_menu_page as necessary. 
+	//adjust the list of remove_menu_page as necessary. 
     }
 }
